@@ -51,6 +51,7 @@ t.seth(90)
 t.showturtle()
 t.pendown()
 
+
 # figury możliwe do wylosowania
 def figura1():
     t.forward(150)
@@ -63,10 +64,12 @@ def figura1():
     t.left(180)
     t.fd(150)
 
+
 def figura2():
     for i in range(4):
         t.forward(200)
         t.left(90)
+
 
 def figura3():
     for i in range(4):
@@ -78,47 +81,55 @@ def figura3():
         t.forward(50)
         t.left(90)
 
+
 def figura4():
     t.left(90)
     t.forward(500)
     t.right(90)
     t.forward(50)
     for i in range(5):
-        t.forward((5-i)*50)
+        t.forward((5 - i) * 50)
         t.right(90)
         t.forward(50)
         t.right(90)
-        t.forward((5-i)*50)
+        t.forward((5 - i) * 50)
         t.left(90)
         t.forward(50)
         t.left(90)
     t.right(180)
     t.forward(50)
 
+
 # opis przycisków
 def gora():
     t.seth(90)
     t.fd(50)
 
+
 def prawo():
     t.seth(0)
     t.fd(50)
+
 
 def dol():
     t.seth(270)
     t.fd(50)
 
+
 def lewo():
     t.seth(180)
     t.fd(50)
 
+
 def koniec():
     t2 = time()
-    print(t2-t1)
+    print(t2 - t1)
+
 
 def reset():
     t.clear()
     losujfigure()
+
 
 def losujfigure():
     t.seth(90)
@@ -137,11 +148,12 @@ def losujfigure():
     global t1
     t1 = time()
 
+
 def fraktal():
     t.speed(0)
     t.clear()
     t.penup()
-    t.goto(0,0)
+    t.goto(0, 0)
     t.seth(90)
     t.pendown()
     for i in range(150):
@@ -149,7 +161,7 @@ def fraktal():
         for j in range(4):
             color = choice(colors)
             t.pencolor(color)
-            t.forward(150-i)
+            t.forward(150 - i)
             t.left(90)
         t.left(5)
 
